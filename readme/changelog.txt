@@ -1,0 +1,67 @@
++======================================================+
+   Discuz! ML v.3.2 (MultiLingual)
+   (c) by Valery Votintsev and CodersClub community
+   http://codersclub.org/discuzx/
+
+   Based on Discuz! X3.2
++======================================================+
+
+Main differences from the official Discuz!X:
+
+1. All the language files translated
+2. Added a javascript language file
+3. All the javascript files modified for Multi Language usage
+4. All the images converted to Miltilingual or translated to English
+   (You can find the Photoshop images in /PSD/ directory)
+5. All other files translated to English (.xml, .css, etc.)
+6. Database structure modified for european languages (most of fields expanded)
+7. All the Chinese stringsencoded with HTML code like &#NNNN; translated to English
+8. Some styles modified for more wider fields
+9. Upgrade/Convert utilities translated to English
+10. All Discuz!X "readme/" files translated to English
+11. UCenter upgraded to v.1.6.0
+12. UCenter API Development Guide translated to English
+
++======================================+
+   Discuz! X3.2 Release 20160601
++======================================+
+Fixed security issues, stable version
++======================================+
+   Discuz! X3.2 Release 20151208
++======================================+
+Fixed security issues, stable version
++======================================+
+   Discuz! X3.2 Release 20150609
++======================================+
+Fixed security issues, stable version
++======================================+
+   Discuz! X3.2 Release 20141225
++======================================+
+Fixed some security problems, stable version
++======================================+
+   Discuz! X3.2 Release 20140618
++======================================+
+Fixed some problems, the stable version
+
++======================================+
+   Discuz! X3.2 Release 20140603
++======================================+
+Optimized: Improve efficiency of the page sections
+Improvement: Plug-in mechanism provide more interfaces 
+New: Log on with micro-channel, Support micro-communities
+Fix: Fixed known issues and security risks from the previous versions
+
++--------------------------------------+
+Old Versions
++--------------------------------------+
+Discuz! X1 Beta Release 20100501
+Discuz! X1 Release 20100518
+Discuz! X1 Release 20100601
+Discuz! X1 Release 20100613
+Discuz! X1 Release 20100723
+Discuz! X1.5RC Release 20100901
+Discuz! X1.5
+Discuz! X2
+Discuz! X2.5
+Discuz! X3
+Discuz! X3.1
