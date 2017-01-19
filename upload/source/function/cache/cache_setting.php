@@ -4,7 +4,7 @@
  *      [Discuz!] (C)2001-2099 Comsenz Inc.
  *      This is NOT a freeware, use is subject to license terms
  *
- *      $Id: cache_setting.php 36293 2016-12-14 02:50:56Z nemohou $
+ *      $Id: cache_setting.php 36353 2017-01-17 07:19:28Z nemohou $
  *	Modified by Valery Votintsev, codersclub.org
  */
 
@@ -433,7 +433,7 @@ function build_cache_setting() {
 				$domain = $defaultcurhost;
 			}
 			if($domain != '{CURHOST}') {
-				$domain = 'http://'.$domain.$_G['siteport'].'/';
+				$domain = $_G['scheme'].'://'.$domain.$_G['siteport'].'/';
 			}
 			if($repflag) {
 				$output['str']['search'][$app] = "<a href=\"{$app}.php";
@@ -834,7 +834,7 @@ function get_cachedata_mainnav() {
 		if($nav['type'] == 0) {
 			$domainkey = substr($purl['path'], 0, -strlen(strrchr($purl['path'], '.')));
 			if(!empty($_G['setting']['domain']['app'][$domainkey]) && !in_array(strtolower($nav['title']), array('follow', 'guide', 'collection', 'blog', 'album', 'favorite', 'friend', 'share', 'doing'))) {
-				$nav['url'] = 'http://'.$_G['setting']['domain']['app'][$domainkey];
+				$nav['url'] = $_G['scheme'].'://'.$_G['setting']['domain']['app'][$domainkey];
 			}
 		}
 
@@ -863,7 +863,7 @@ function get_cachedata_footernav() {
 					continue;
 				} else {
 					$domain = $_G['setting']['domain']['app']['forum'] ? $_G['setting']['domain']['app']['forum'] : ($_G['setting']['domain']['app']['default'] ? $_G['setting']['domain']['app']['default'] : '');
-					$nav['url'] = ($domain ? 'http://'.$domain.'/' : '').$nav['url'];
+					$nav['url'] = ($domain ? $_G['scheme'].'://'.$domain.'/' : '').$nav['url'];
 				}
 			}
 		}
@@ -967,7 +967,7 @@ function get_cachedata_mynavs() {
 			if(!preg_match("/^".preg_quote(STATICURL, '/')."/i", $navicon) && !(($valueparse = parse_url($navicon)) && isset($valueparse['host']))) {
 				$navicon = $_G['setting']['attachurl'].'common/'.$nav['icon'].'?'.random(6);
 			}
-			$navicon = preg_match('/^http:\/\//i', $navicon) ? $navicon : $_G['siteurl'].$navicon;
+			$navicon = preg_match('/^(https?:)?\/\//i', $navicon) ? $navicon : $_G['siteurl'].$navicon;
 			$nav['icon'] = ' style="background-image:url('.$navicon.') !important"';
 		}
 /*vot*/		$nav['code'] = '<a href="'.$nav['url'].'"'.($nav['title'] ? ' title="'.$nav['title'].'"' : '').($nav['target'] == 1 ? ' target="_blank"' : '').$nav['icon'].'>';
